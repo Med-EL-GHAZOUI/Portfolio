@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | EL-GHAZOUI Mohamed</title>
+  <meta name="description" content="Portfolio professionnel de EL-GHAZOUI Mohamed, Designer graphique & Développeur Front-end">
+  <meta name="keywords" content="design graphique, développement front-end, UI/UX, Rabat, Maroc">
+  <meta name="author" content="EL-GHAZOUI Mohamed">
+  
+  <!-- Préchargement des polices et ressources importantes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://kit.fontawesome.com/a076d05399.js" as="script">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
+  
+  <style>
+    :root {
+      --primary-color: #6e48aa;
+      --primary-light: #9d50bb;
+      --secondary-color: #ff7e5f;
+      --light-color: #f9f9f9;
+      --dark-color: #333;
+      --text-color: #444;
+      --text-light: #777;
+      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-lg: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+      --shadow-xl: 0 14px 28px rgba(0,0,0,0.12), 0 10px 10px rgba(0,0,0,0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--primary-light);
+      outline-offset: 2px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', 'Segoe UI', system-ui, sans-serif;
+      background-color: var(--light-color);
+      color: var(--text-color);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* Typographie améliorée */
+    h1, h2, h3, h4 {
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Layout */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      padding: 6rem 0;
+      position: relative;
+    }
+
+    /* Header Styles */
+    header {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
+      opacity: 0.3;
+    }
+
+    .header-content {
+      max-width: 800px;
+      position: relative;
+      z-index: 2;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
+      border-radius: 15px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    header h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      margin-bottom: 1.5rem;
+      animation: fadeInDown 1s ease-out;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      opacity: 0.9;
+      margin-bottom: 2.5rem;
+      animation: fadeInUp 1s ease-out 0.3s both;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--secondary-color);
+      color: white;
+      padding: 0.8rem 2rem;
+      border-radius: 30px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: var(--transition);
+      box-shadow: var(--shadow-md);
+      animation: fadeIn 1s ease-out 0.6s both;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+      background-color: #ff6a45;
+    }
+
+    .scroll-down {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: bounce 2s infinite;
+      cursor: pointer;
+      color: white;
+      font-size: 1.8rem;
+      background: rgba(255,255,255,0.2);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .scroll-down:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
+    /* Navigation améliorée */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.98);
+      box-shadow: var(--shadow-sm);
+      z-index: 1000;
+      transition: var(--transition);
+      backdrop-filter: blur(5px);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .logo {
+      font-weight: 700;
+      color: var(--primary-color);
+      font-size: 1.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo-icon {
+      font-size: 1.6rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      color: var(--dark-color);
+      font-weight: 500;
+      position: relative;
+      padding: 0.5rem 0;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary-color);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--primary-color);
+    }
+
+    /* Sections */
+    .section-title {
+      text-align: center;
+      margin-bottom: 4rem;
+      font-size: clamp(2rem, 3vw, 3rem);
+      color: var(--primary-color);
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 5px;
+      background: linear-gradient(to right, var(--primary-color), var(--primary-light));
+      margin: 1.5rem auto 0;
+      border-radius: 3px;
+    }
+
+    /* About Section */
+    #about {
+      background-color: white;
+    }
+
+    .about-content {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+
+    .skill {
+      background: var(--light-color);
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .skill:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      background: var(--primary-color);
+      color: white;
+    }
+
+    /* Projects Section améliorée */
+    #projects {
+      background-color: #f5f5f5;
+    }
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .project {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      position: relative;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .project.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .project:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .project-img-container {
+      position: relative;
+      overflow: hidden;
+      height: 250px;
+    }
+
+    .project-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .project:hover .project-img {
+      transform: scale(1.05);
+    }
+
+    .project-content {
+      padding: 2rem;
+    }
+
+    .project h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .project p {
+      margin-bottom: 1rem;
+      color: var(--text-light);
+      font-size: 0.95rem;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 1.5rem;
+    }
+
+    .tag {
+      background: rgba(110, 72, 170, 0.1);
+      color: var(--primary-color);
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+
+    .tag:hover {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    /* Contact Section améliorée */
+    #contact {
+      background-color: white;
+    }
+
+    .contact-info {
+      max-width: 700px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .contact-item {
+      background: var(--light-color);
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      transition: var(--transition);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-icon {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 auto 1.5rem;
+    }
+
+    .contact-text {
+      text-align: center;
+    }
+
+    .contact-text h3 {
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+
+    .contact-text a {
+      color: var(--text-color);
+      transition: var(--transition);
+    }
+
+    .contact-text a:hover {
+      color: var(--primary-color);
+    }
+
+    /* Footer amélioré */
+    footer {
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+      color: white;
+      text-align: center;
+      padding: 4rem 0 2rem;
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
+      opacity: 0.2;
+    }
+
+    .footer-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .social-link {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+      font-size: 1.3rem;
+    }
+
+    .social-link:hover {
+      background: white;
+      color: var(--primary-color);
+      transform: translateY(-5px);
+    }
+
+    .copyright {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--primary-light);
+      transform: translateY(-3px);
+    }
+
+    /* Dark Mode Toggle amélioré */
+    .dark-mode-toggle {
+      position: fixed;
+      bottom: 30px;
+      right: 90px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+      z-index: 1000;
+      border: none;
+      transition: var(--transition);
+    }
+
+    .dark-mode-toggle:hover {
+      background: var(--primary-light);
+      transform: translateY(-3px);
+    }
+
+    /* Dark Mode Styles */
+    body.dark-mode {
+      --light-color: #1a1a1a;
+      --dark-color: #f5f5f5;
+      --text-color: #e0e0e0;
+      --text-light: #b0b0b0;
+      background-color: #121212;
+    }
+
+    body.dark-mode #about,
+    body.dark-mode #contact,
+    body.dark-mode .project,
+    body.dark-mode .contact-item {
+      background-color: #222;
+    }
+
+    body.dark-mode #projects {
+      background-color: #1a1a1a;
+    }
+
+    body.dark-mode nav {
+      background: rgba(34, 34, 34, 0.98);
+    }
+
+    body.dark-mode .nav-links a {
+      color: var(--dark-color);
+    }
+
+    body.dark-mode .skill {
+      background: #333;
+    }
+
+    /* Loader */
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+    }
+
+    .loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .loader-spinner {
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(255,255,255,0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+    }
+
+    /* Animations améliorées */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0) translateX(-50%);
+      }
+      40% {
+        transform: translateY(-20px) translateX(-50%);
+      }
+      60% {
+        transform: translateY(-10px) translateX(-50%);
+      }
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Responsive Design amélioré */
+    @media (max-width: 992px) {
+      section {
+        padding: 5rem 0;
+      }
+      
+      .header-content {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem 0;
+        gap: 1.5rem;
+        box-shadow: var(--shadow-md);
+        transform: translateY(-150%);
+        transition: transform 0.3s ease-out;
+        z-index: 999;
+      }
+
+      body.dark-mode .nav-links {
+        background: #222;
+      }
+
+      .nav-links.active {
+        transform: translateY(0);
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .project-content {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .header-content {
+        padding: 1rem;
+      }
+      
+      header h1 {
+        font-size: 2.2rem;
+      }
+      
+      .section-title {
+        margin-bottom: 3rem;
+      }
+      
+      .contact-info {
+        grid-template-columns: 1fr;
+      }
+      
+      .back-to-top,
+      .dark-mode-toggle {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+      }
+      
+      .dark-mode-toggle {
+        right: 80px;
+        bottom: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Loader -->
+  <div class="loader">
+    <div class="loader-spinner"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="container nav-container">
+      <a href="#" class="logo">
+        <span class="logo-icon">🎨</span>
+        <span>EL-GHAZOUI</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about" class="active">À propos</a>
+        <a href="#projects">Projets</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="hamburger" aria-label="Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-content">
+      <h1>EL-GHAZOUI Mohamed</h1>
+      <p>Designer graphique & Développeur Front-end passionné par la création d'expériences digitales mémorables</p>
+      <a href="#projects" class="cta-button">Voir mes projets</a>
+    </div>
+    <div class="scroll-down" onclick="document.querySelector('#about').scrollIntoView({ behavior: 'smooth' })" aria-label="Scroll vers le bas">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">À propos</h2>
+      <div class="about-content">
+        <p>Je suis un designer graphique et développeur front-end passionné, spécialisé dans la création d'expériences visuelles mémorables et d'interfaces utilisateur intuitives. Mon approche combine une sensibilité artistique avec des compétences techniques pour produire des designs qui non seulement plaisent à l'œil mais remplissent aussi leur fonction efficacement.</p>
+        
+        <div class="skills">
+          <span class="skill">UI/UX Design</span>
+          <span class="skill">Identité Visuelle</span>
+          <span class="skill">HTML/CSS</span>
+          <span class="skill">JavaScript</span>
+          <span class="skill">Adobe Creative Suite</span>
+          <span class="skill">Responsive Design</span>
+          <span class="skill">Figma</span>
+          <span class="skill">Animation Web</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">Mes projets</h2>
+      <div class="projects-container">
+        <div class="project">
+          <div class="project-img-container">
+            <img src="Dar essaha.png" alt="Projet Dar Essaha - Design d'identité visuelle" class="project-img" loading="lazy">
+          </div>
+          <div class="project-content">
+            <h3>Dar Essaha</h3>
+            <p><strong>Domaine :</strong> Santé</p>
+            <p><strong>Objectif :</strong> Créer une identité visuelle rassurante pour un centre de santé.</p>
+            <p><strong>Message :</strong> Bienvenue dans votre espace santé</p>
+            <div class="project-tags">
+              <span class="tag">Logo Design</span>
+              <span class="tag">Identité Visuelle</span>
+              <span class="tag">Print</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-img-container">
+            <img src="Eduboost.png" alt="Projet EduBoost - Design web" class="project-img" loading="lazy">
+          </div>
+          <div class="project-content">
+            <h3>EduBoost</h3>
+            <p><strong>Domaine :</strong> Éducation</p>
+            <p><strong>Objectif :</strong> Promouvoir un centre d'appui scolaire</p>
+            <p><strong>Message :</strong> Votre tremplin vers l'excellence</p>
+            <div class="project-tags">
+              <span class="tag">Web Design</span>
+              <span class="tag">UI/UX</span>
+              <span class="tag">Branding</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="project-img-container">
+            <img src="Foodora.png" alt="Projet Foodora - Design de packaging" class="project-img" loading="lazy">
+          </div>
+          <div class="project-content">
+            <h3>Foodora</h3>
+            <p><strong>Domaine :</strong> Restauration</p>
+            <p><strong>Objectif :</strong> Mettre en valeur des plats savoureux avec un visuel chaleureux</p>
+            <p><strong>Message :</strong> Bien manger. Tous les jours</p>
+            <div class="project-tags">
+              <span class="tag">Packaging</span>
+              <span class="tag">Illustration</span>
+              <span class="tag">Marketing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-text">
+            <h3>Localisation</h3>
+            <p>Rabat, Maroc</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-text">
+            <h3>Email</h3>
+            <p><a href="mailto:elghazoui.md@gmail.com">elghazoui.md@gmail.com</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-text">
+            <h3>Téléphone</h3>
+            <p><a href="tel:+212682444921">+212 6 82 44 49 21</a></p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <div class="contact-text">
+            <h3>LinkedIn</h3>
+            <p><a href="https://www.linkedin.com/in/mohamed-el-ghazoui" target="_blank" rel="noopener noreferrer">/mohamed-el-ghazoui</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/mohamed-el-ghazoui" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/Med-EL-GHAZOUI" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+      <p class="copyright">&copy; 2023 EL-GHAZOUI Mohamed - Tous droits réservés</p>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <div class="back-to-top" aria-label="Retour en haut">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <!-- Dark Mode Toggle -->
+  <button class="dark-mode-toggle" aria-label="Basculer en mode sombre">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <script>
+    // Loader
+    window.addEventListener('load', function() {
+      const loader = document.querySelector('.loader');
+      loader.classList.add('hidden');
+      
+      // Remove loader from DOM after animation completes
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 500);
+    });
+
+    // Mobile navigation toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.innerHTML = navLinks.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+      });
+    });
+
+    // Active link highlighting
+    const sections = document.querySelectorAll('section');
+    const navItems = document.querySelectorAll('.nav-links a');
+    
+    window.addEventListener('scroll', () => {
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (pageYOffset >= sectionTop - 300) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        if (item.getAttribute('href') === `#${current}`) {
+          item.classList.add('active');
+        }
+      });
+      
+      // Back to top button visibility
+      const backToTop = document.querySelector('.back-to-top');
+      if (window.pageYOffset > 300) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    // Back to top functionality
+    document.querySelector('.back-to-top').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Project animation on scroll
+    const projectObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.project').forEach(project => {
+      projectObserver.observe(project);
+    });
+
+    // Image fallback
+    document.querySelectorAll('img').forEach(img => {
+      img.onerror = function() {
+        this.src = 'https://via.placeholder.com/600x400?text=Projet+Design';
+        this.alt = 'Image non disponible';
+      };
+    });
+
+    // Dark mode toggle
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const icon = document.querySelector('.dark-mode-toggle i');
+      
+      if (document.body.classList.contains('dark-mode')) {
+        icon.classList.replace('fa-moon', 'fa-sun');
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        icon.classList.replace('fa-sun', 'fa-moon');
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    }
+
+    // Check for saved dark mode preference
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      document.body.classList.add('dark-mode');
+      const icon = document.querySelector('.dark-mode-toggle i');
+      icon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Contact items animation
+    const contactItems = document.querySelectorAll('.contact-item');
+    contactItems.forEach((item, index) => {
+      item.style.opacity = '0';
+      item.style.transform = 'translateY(20px)';
+      item.style.transition = `all 0.5s ease ${index * 0.1}s`;
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      observer.observe(item);
+    });
+
+    // Copy email to clipboard
+    const emailItem = document.querySelector('[href^="mailto:"]').parentElement.parentElement;
+    emailItem.addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') return;
+      
+      const email = 'elghazoui.md@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        const originalText = emailItem.querySelector('p').textContent;
+        emailItem.querySelector('p').textContent = 'Email copié !';
+        
+        setTimeout(() => {
+          emailItem.querySelector('p').innerHTML = `<a href="mailto:${email}">${email}</a>`;
+        }, 2000);
+      });
+    });
+  </script>
+</body>
+</html>
