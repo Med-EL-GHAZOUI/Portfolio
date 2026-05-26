@@ -1,0 +1,45 @@
+@import "../styles.css";
+
+.contact-status {
+  grid-column: 1 / -1;
+  min-height: 22px;
+  font-size: 13px;
+}
+
+.contact-status[data-state="success"] {
+  color: var(--green);
+}
+
+.contact-status[data-state="error"] {
+  color: #ff8297;
+}
+
+.project-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 210;
+  display: grid;
+  place-items: center;
+  padding: 19px;
+  background: rgba(2, 4, 12, 0.7);
+  backdrop-filter: blur(7px);
+}
+
+.project-modal-overlay .modal {
+  display: block;
+  margin: 0;
+  background: var(--surface-strong);
+}
+
+.palette-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 210;
+  background: rgba(2, 4, 12, 0.7);
+  backdrop-filter: blur(7px);
+}
+
+.palette-overlay .palette {
+  display: block;
+  background: var(--surface-strong);
+}

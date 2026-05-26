@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="fr" data-theme="cyber">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#060817" />
+    <meta
+      name="description"
+      content="Portfolio de Mohamed El-Ghazoui, étudiant ingénieur en Informatique et Réseaux à l'EMSI Rabat."
+    />
+    <meta property="og:title" content="Mohamed El-Ghazoui | Informatique et Réseaux" />
+    <meta property="og:description" content="Projets, compétences, certifications et parcours EMSI de Mohamed El-Ghazoui." />
+    <meta property="og:type" content="profile" />
+    <title>Mohamed El-Ghazoui | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mohamed El-Ghazoui",
+        "jobTitle": "Étudiant ingénieur en Informatique et Réseaux",
+        "email": "mailto:elghazoui.md@gmail.com",
+        "telephone": "+212 6 82 44 49 21",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1 Rue Mohammadia Appt 20, 5 Etg, Hassan Rt",
+          "postalCode": "10000",
+          "addressLocality": "Rabat",
+          "addressCountry": "MA"
+        },
+        "alumniOf": "EMSI Rabat",
+        "sameAs": [
+          "https://www.linkedin.com/in/mohamed-el-ghazoui",
+          "https://github.com/Med-EL-GHAZOUI"
+        ]
+      }
+    </script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <canvas id="particle-canvas" aria-hidden="true"></canvas>
+    <div class="grid-floor" aria-hidden="true"></div>
+    <div class="orb orb-one" aria-hidden="true"></div>
+    <div class="orb orb-two" aria-hidden="true"></div>
+    <div id="spotlight" class="spotlight" aria-hidden="true"></div>
+    <div id="cursor" class="cursor" aria-hidden="true"></div>
+    <div id="cursor-dot" class="cursor-dot" aria-hidden="true"></div>
+    <div id="progress" class="scroll-progress" aria-hidden="true"></div>
+
+    <section id="loader" class="loader" aria-label="Chargement de l'interface">
+      <div class="loader-core">
+        <div class="boot-lines" aria-live="polite">
+          <span>&gt; INITIALIZING PORTFOLIO</span>
+          <span>&gt; LOADING EMSI PROFILE</span>
+          <span>&gt; READY TO CONNECT</span>
+        </div>
+        <div class="loader-brand"><span>M</span> MED//PORTFOLIO</div>
+        <div class="loader-track"><i id="loader-bar"></i></div>
+        <div class="loader-meta"><span>BOOT SEQUENCE</span><output id="loader-value">00%</output></div>
+      </div>
+    </section>
+
+    <a class="skip-link" href="#main">Aller au contenu</a>
+    <header class="header glass">
+      <a class="brand" href="#home" aria-label="Mohamed El-Ghazoui, retour accueil">
+        <span class="brand-mark">M</span>
+        <span>MED.DEV</span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#about">Profil</a>
+        <a href="#skills">Compétences</a>
+        <a href="#projects">Projets</a>
+        <a href="#education">Formations</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="controls">
+        <button id="theme-toggle" class="pill-button" aria-label="Changer le thème">CYBER</button>
+        <button id="command-open" class="command-button" aria-label="Ouvrir la palette de commandes"><span>Ctrl</span>K</button>
+      </div>
+    </header>
+
+    <aside class="dock glass" aria-label="Sections rapides">
+      <a href="#home" class="active" aria-label="Accueil"><span></span></a>
+      <a href="#about" aria-label="Profil"><span></span></a>
+      <a href="#skills" aria-label="Compétences"><span></span></a>
+      <a href="#projects" aria-label="Projets"><span></span></a>
+      <a href="#education" aria-label="Formations"><span></span></a>
+      <a href="#certifications" aria-label="Certifications"><span></span></a>
+      <a href="#contact" aria-label="Contact"><span></span></a>
+    </aside>
+
+    <main id="main">
+      <section id="home" class="hero section">
+        <div class="hero-content reveal">
+          <div class="availability"><i></i><span>Étudiant ingénieur à l'EMSI Rabat</span></div>
+          <p class="eyebrow">INFORMATIQUE / RÉSEAUX / DÉVELOPPEMENT WEB</p>
+          <h1 class="profile-name">MOHAMED<br /><span class="gradient-text">EL-GHAZOUI</span></h1>
+          <p class="hero-role">Étudiant ingénieur en Informatique et Réseaux</p>
+          <p class="hero-copy">
+            Passionné par les sciences et les technologies, je développe des solutions web et logicielles
+            en mobilisant mes compétences en informatique, réseaux et résolution de problèmes complexes.
+          </p>
+          <div class="hero-actions">
+            <a class="cta magnetic" href="#projects">Voir mes projets</a>
+            <a class="cta secondary magnetic" href="#contact">Me contacter</a>
+            <a class="cta secondary magnetic" href="./assets/CV-EL-GHAZOUI-Mohamed.pdf" download="CV-EL-GHAZOUI-Mohamed.pdf">Télécharger CV</a>
+          </div>
+          <div class="socials" aria-label="Contacts professionnels">
+            <a href="mailto:elghazoui.md@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/mohamed-el-ghazoui" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/Med-EL-GHAZOUI" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="avatar-shell portrait-shell glass">
+            <div class="scanline"></div>
+            <img
+              class="profile-photo"
+              src="./assets/mohamed-el-ghazoui.jpeg"
+              alt="Portrait de Mohamed El-Ghazoui"
+              width="896"
+              height="1194"
+              decoding="async"
+              fetchpriority="high"
+            />
+            <div class="identity">
+              <strong>MOHAMED EL-GHAZOUI</strong>
+              <span>EMSI Rabat / Maroc</span>
+            </div>
+          </div>
+          <div class="hud-card glass hud-top">
+            <span>PARCOURS</span><strong>INGÉNIEUR</strong>
+          </div>
+          <div class="hud-card glass hud-bottom">
+            <span>PROMOTION</span><strong>2027</strong>
+            <div class="mini-wave"></div>
+          </div>
+        </div>
+        <div class="scroll-hint"><span>DÉCOUVRIR LE PROFIL</span><i></i></div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">01 / À PROPOS</p>
+          <h2>Un parcours d'ingénieur tourné vers les technologies.</h2>
+          <p>
+            Étudiant en deuxième année du cycle ingénieur à l'École Marocaine des Sciences de l'Ingénieur,
+            EMSI Rabat, je consolide un profil polyvalent en informatique, réseaux et développement web.
+          </p>
+        </div>
+        <div class="profile-grid">
+          <article class="profile-card glass reveal">
+            <span class="label">PROFIL ACADÉMIQUE</span>
+            <h3>EMSI Rabat</h3>
+            <p>Ingénierie Informatique et Réseaux</p>
+            <div class="profile-lines">
+              <span><small>Niveau</small>2e année du cycle ingénieur</span>
+              <span><small>Parcours</small>2024 - 2027</span>
+              <span><small>Localisation</small>Rabat, Maroc</span>
+            </div>
+          </article>
+          <article class="profile-card glass reveal">
+            <span class="label">OBJECTIF</span>
+            <h3>Construire, apprendre, résoudre</h3>
+            <p>
+              Mettre en pratique mes connaissances sur des projets informatiques concrets,
+              utiles et techniquement exigeants.
+            </p>
+            <div class="tags">
+              <span>Réseaux</span><span>Web</span><span>Logiciel</span><span>Problem Solving</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="section-heading reveal compact">
+          <p class="eyebrow">02 / COMPÉTENCES</p>
+          <h2>Technologies et environnements pratiqués.</h2>
+        </div>
+        <div class="skills-grid five">
+          <article class="skill-card glass reveal">
+            <span class="skill-icon">&lt;/&gt;</span><h3>Frontend</h3>
+            <div class="skill-badges"><span>JavaScript</span><span>TypeScript</span><span>Bootstrap</span><span>Tailwind CSS</span><span>React.js</span><span>Angular.js</span></div>
+          </article>
+          <article class="skill-card glass reveal">
+            <span class="skill-icon">{ }</span><h3>Backend</h3>
+            <div class="skill-badges"><span>PHP</span><span>Laravel</span><span>Node.js</span><span>Express.js</span><span>Django</span><span>Nest.js</span><span>ASP.NET Core</span><span>Java EE</span></div>
+          </article>
+          <article class="skill-card glass reveal">
+            <span class="skill-icon">DB</span><h3>Bases de données</h3>
+            <div class="skill-badges"><span>MySQL</span><span>PL/SQL</span><span>SQL Server</span><span>Oracle</span><span>MongoDB</span></div>
+          </article>
+          <article class="skill-card glass reveal">
+            <span class="skill-icon">OS</span><h3>Systèmes</h3>
+            <div class="skill-badges"><span>Linux</span><span>RedHat</span></div>
+          </article>
+          <article class="skill-card glass reveal">
+            <span class="skill-icon">++</span><h3>Programmation avancée</h3>
+            <div class="skill-badges"><span>C++</span><span>Java</span><span>Python</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section projects">
+        <div class="section-heading reveal">
+          <p class="eyebrow">03 / PROJETS RÉALISÉS</p>
+          <h2>Applications et solutions développées.</h2>
+        </div>
+        <div class="project-tools reveal">
+          <label class="search glass">
+            <span aria-hidden="true">⌕</span>
+            <input id="project-search" type="search" placeholder="Rechercher un projet..." />
+          </label>
+          <div id="filters" class="filters" aria-label="Filtrer les projets">
+            <button class="active" data-filter="all">Tous</button>
+            <button data-filter="frontend">Frontend</button>
+            <button data-filter="backend">Backend</button>
+            <button data-filter="java">Java</button>
+          </div>
+        </div>
+        <div id="project-grid" class="project-grid portfolio-projects">
+          <article class="project-card glass reveal featured" data-category="backend web" data-title="Application Web GPEC">
+            <div class="preview preview-featured"><span class="pulse"></span><strong>GPEC</strong><i></i></div>
+            <div class="project-content">
+              <span class="label">PROJET PHARE / COPAG</span>
+              <h3>Application Web pour la GPEC</h3>
+              <p>Solution de gestion prévisionnelle des emplois et des compétences pour la Coopérative Agricole COPAG.</p>
+              <div class="tags"><span>Web</span><span>GPEC</span><span>COPAG</span></div>
+              <div class="project-links"><button class="open-project" data-project="gpec">Voir détails</button></div>
+            </div>
+          </article>
+          <article class="project-card glass reveal" data-category="frontend web" data-title="Employee Management System">
+            <div class="preview tech-preview react">REACT</div>
+            <div class="project-content"><h3>Employee Management System</h3><p>Interface de gestion des employés réalisée avec React.js.</p><div class="tags"><span>React.js</span></div><div class="project-links"><button class="open-project" data-project="employee">Voir détails</button></div></div>
+          </article>
+          <article class="project-card glass reveal" data-category="backend web" data-title="Gestion des devoirs">
+            <div class="preview tech-preview laravel">LARAVEL</div>
+            <div class="project-content"><h3>Gestion des devoirs</h3><p>Application web pour organiser et suivre les devoirs.</p><div class="tags"><span>Laravel</span></div><div class="project-links"><button class="open-project" data-project="devoirs">Voir détails</button></div></div>
+          </article>
+          <article class="project-card glass reveal" data-category="frontend web" data-title="Plateforme de cours en ligne">
+            <div class="preview tech-preview web">WEB</div>
+            <div class="project-content"><h3>Plateforme de cours en ligne</h3><p>Plateforme pédagogique interactive accessible via navigateur.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><div class="project-links"><button class="open-project" data-project="courses">Voir détails</button></div></div>
+          </article>
+          <article class="project-card glass reveal" data-category="frontend web" data-title="Application E-Commerce">
+            <div class="preview tech-preview next">NEXT</div>
+            <div class="project-content"><h3>Application E-Commerce</h3><p>Expérience d'achat web construite avec Next.js.</p><div class="tags"><span>Next.js</span></div><div class="project-links"><button class="open-project" data-project="commerce">Voir détails</button></div></div>
+          </article>
+          <article class="project-card glass reveal" data-category="frontend web" data-title="Hotel Booking">
+            <div class="preview tech-preview react">REACT</div>
+            <div class="project-content"><h3>Hotel Booking</h3><p>Application de réservation hôtelière moderne et réactive.</p><div class="tags"><span>React.js</span></div><div class="project-links"><button class="open-project" data-project="hotel">Voir détails</button></div></div>
+          </article>
+          <article class="project-card glass reveal" data-category="java" data-title="Gestion des ressources humaines">
+            <div class="preview tech-preview java">JAVA</div>
+            <div class="project-content"><h3>Gestion des ressources humaines</h3><p>Application de gestion RH développée en Java.</p><div class="tags"><span>Java</span></div><div class="project-links"><button class="open-project" data-project="rh">Voir détails</button></div></div>
+          </article>
+          <article class="project-card glass reveal" data-category="backend web" data-title="Gestion des conferences">
+            <div class="preview tech-preview django">DJANGO</div>
+            <div class="project-content"><h3>Gestion des conférences</h3><p>Système web d'organisation et de suivi des conférences.</p><div class="tags"><span>Django</span></div><div class="project-links"><button class="open-project" data-project="conferences">Voir détails</button></div></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="education" class="section">
+        <div class="section-heading reveal compact">
+          <p class="eyebrow">04 / FORMATIONS</p>
+          <h2>Parcours académique.</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <time>2024 - 2027</time>
+            <div class="glass"><h3>Ingénierie Informatique et Réseaux</h3><p>EMSI Rabat - Rabat</p></div>
+          </article>
+          <article class="timeline-item reveal">
+            <time>2022 - 2024</time>
+            <div class="glass"><h3>Années préparatoires en ingénierie</h3><p>Informatique, industrielle et automatisme - EMSI Rabat</p></div>
+          </article>
+          <article class="timeline-item reveal">
+            <time>2021 - 2022</time>
+            <div class="glass"><h3>Baccalauréat en Sciences Physiques et Chimiques</h3><p>Lycée Missour Mixte - Missour</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="certifications" class="section">
+        <div class="section-heading reveal compact">
+          <p class="eyebrow">05 / CERTIFICATIONS</p>
+          <h2>Apprentissage certifié.</h2>
+        </div>
+        <div class="cert-grid">
+          <article class="cert-card glass reveal"><time>16 AVRIL 2025</time><h3>Software Engineering: Software Design and Project Management</h3><p>The Hong Kong University of Science and Technology</p></article>
+          <article class="cert-card glass reveal"><time>16 AVRIL 2025</time><h3>Python for Data Science, AI &amp; Development</h3><p>IBM</p></article>
+          <article class="cert-card glass reveal"><time>01 DÉCEMBRE 2024</time><h3>Interactivity with JavaScript</h3><p>University of Michigan</p></article>
+          <article class="cert-card glass reveal"><time>09 DÉCEMBRE 2024</time><h3>Introduction à la programmation orientée objet en C++</h3><p>École Polytechnique Fédérale de Lausanne</p></article>
+          <article class="cert-card glass reveal"><time>06 DÉCEMBRE 2024</time><h3>The Unix Workbench</h3><p>Johns Hopkins University</p></article>
+        </div>
+      </section>
+
+      <section id="personal" class="section">
+        <div class="section-heading reveal compact">
+          <p class="eyebrow">06 / PROFIL PERSONNEL</p>
+          <h2>Langues, qualités et intérêts.</h2>
+        </div>
+        <div class="personal-grid">
+          <article class="glass reveal">
+            <span class="label">LANGUES</span>
+            <div class="large-badges"><span>Arabe</span><span>Français</span><span>Anglais</span></div>
+          </article>
+          <article class="glass reveal">
+            <span class="label">QUALITÉS HUMAINES</span>
+            <div class="large-badges"><span>Travail d'équipe</span><span>Adaptabilité</span><span>Rigueur</span><span>Autonomie</span><span>Persévérance</span></div>
+          </article>
+          <article class="glass reveal">
+            <span class="label">CENTRES D'INTÉRÊT</span>
+            <div class="interest-list"><strong>Bénévolat</strong><strong>Sports collectifs</strong></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="section-heading reveal">
+          <p class="eyebrow">07 / CONTACT</p>
+          <h2>Échangeons autour d'une opportunité.</h2>
+          <p>Disponible pour discuter de projets, stages et opportunités dans l'informatique et les réseaux.</p>
+          <div class="contact-list">
+            <a href="tel:+212682444921"><small>Téléphone</small>+212 6 82 44 49 21</a>
+            <a href="mailto:elghazoui.md@gmail.com"><small>Email</small>elghazoui.md@gmail.com</a>
+            <span><small>Adresse</small>1 Rue Mohammadia Appt 20, 5 Etg, Hassan Rt, 10000 Rabat, Maroc</span>
+            <a href="https://www.linkedin.com/in/mohamed-el-ghazoui" target="_blank" rel="noreferrer"><small>LinkedIn</small>mohamed-el-ghazoui</a>
+            <a href="https://github.com/Med-EL-GHAZOUI" target="_blank" rel="noreferrer"><small>GitHub</small>Med-EL-GHAZOUI</a>
+          </div>
+        </div>
+        <form id="contact-form" class="contact-form glass reveal" novalidate>
+          <label><span>Nom</span><input name="name" required placeholder="Votre nom" /></label>
+          <label><span>Email</span><input name="email" type="email" required placeholder="vous@exemple.com" /></label>
+          <label class="wide"><span>Message</span><textarea name="message" required placeholder="Votre message..."></textarea></label>
+          <p id="form-error" class="form-error" aria-live="polite"></p>
+          <button class="cta magnetic" type="submit">Envoyer le message</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="brand"><span class="brand-mark">M</span><span>MED.DEV</span></div>
+      <p>&copy; 2026 Mohamed El-Ghazoui. Portfolio personnel.</p>
+      <div>
+        <a href="mailto:elghazoui.md@gmail.com">Email</a>
+        <a href="https://github.com/Med-EL-GHAZOUI" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/mohamed-el-ghazoui" target="_blank" rel="noreferrer">LinkedIn</a>
+      </div>
+    </footer>
+
+    <dialog id="project-modal" class="modal glass">
+      <button class="modal-close" aria-label="Fermer">x</button>
+      <p class="eyebrow">PROJET RÉALISÉ</p>
+      <h2 id="modal-title"></h2>
+      <p id="modal-copy"></p>
+      <div id="modal-tags" class="tags"></div>
+    </dialog>
+
+    <dialog id="command-palette" class="palette glass">
+      <div class="palette-search"><span>⌕</span><input id="command-query" placeholder="Naviguer vers une section..." /></div>
+      <div id="commands" class="commands">
+        <button data-action="projects"><span>Voir les projets</span><kbd>P</kbd></button>
+        <button data-action="education"><span>Voir les formations</span><kbd>F</kbd></button>
+        <button data-action="certifications"><span>Voir les certifications</span><kbd>C</kbd></button>
+        <button data-action="contact"><span>Me contacter</span><kbd>M</kbd></button>
+        <button data-action="theme"><span>Changer de thème</span><kbd>T</kbd></button>
+        <button data-action="terminal"><span>Ouvrir le terminal</span><kbd>&gt;_</kbd></button>
+      </div>
+    </dialog>
+
+    <section id="terminal" class="terminal glass" aria-label="Terminal interactif" hidden>
+      <header><span></span><span></span><span></span><strong>mohamed-portfolio</strong><button aria-label="Fermer">x</button></header>
+      <div id="terminal-output"><p>Portfolio CLI - tapez <b>help</b> pour découvrir les commandes.</p></div>
+      <form id="terminal-form"><label>visitor@med:~$</label><input id="terminal-input" autocomplete="off" spellcheck="false" /></form>
+    </section>
+
+    <div id="toast" class="toast glass" role="status" aria-live="polite"></div>
+  </body>
+</html>
